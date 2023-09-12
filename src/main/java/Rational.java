@@ -83,7 +83,7 @@ class Rational {
      */
     public boolean equals(Object x) {
         // to be completed
-        if(numerator == x.numerator && denominator == x.denominator) {
+        if(numerator == ((Rational) x).numerator && denominator == ((Rational) x).denominator) {
             return true; // TODO: This needs to be modified.
         }else
             return false;
@@ -97,6 +97,7 @@ class Rational {
      */
     public long compareTo(Object x) {
         // to be completed
+
         return -1; // TODO: this needs to be modified.
     }
 
@@ -106,7 +107,7 @@ class Rational {
      */
     public String toString() { 
         // to be completed
-        return ""; // TODO: This needs to be modified.
+        return ; // TODO: This needs to be modified.
     }
 
     public static void main(String[] args) {
