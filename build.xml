@@ -1,24 +1,13 @@
-<project>
+<project >
     <target name="clean">
         <delete dir="build"/>
-    </target>
+    </target >
     <target name="compile" depends="clean">
         <mkdir dir="build/classes"/>
         <javac srcdir="src" destdir="build/classes">
-            <classpath location="lib/junit-4.13.jar" />
-        </javac>
-    </target>
-    <target name="jar" depends="compile">
-        <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/Rational.jar" basedir="build/classes">
-            <manifest>
-                <attribute name="Main-Class" value="Rational"/>
-            </manifest>
-        </jar>
-    </target>
-    <target name="run" depends="jar">
-        <java jar="build/jar/Rational.jar" fork="true"/>
-    </target>
+            <classpath location ="lib/junit -4.13. jar" />
+        </javac >
+    </target >
     <target name="test" depends="compile">
         <mkdir dir="report"/>
         <junit showoutput ="yes" printsummary ="yes" haltonfailure ="no">
@@ -31,4 +20,15 @@
             </test >
         </junit >
     </target >
-</project>
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile ="build/jar/Rational .jar" basedir="build/classes">
+            <manifest >
+                <attribute name="Main -Class" value="Rational"/>
+            </ manifest >
+        </jar >
+    </target >
+    <target name="run" depends="jar">
+        <java jar="build/jar/Rational .jar" fork="true"/>
+    </target >
+</project >

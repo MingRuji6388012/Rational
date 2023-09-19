@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RationalTest" tests="32" skipped="0" failures="0" errors="0" timestamp="2023-09-19T17:58:16" hostname="MINGRUJI" time="0.008">
+  <properties/>
+  <testcase name="testToString_10" classname="RationalTest" time="0.004"/>
+  <testcase name="testToString_11" classname="RationalTest" time="0.0"/>
+  <testcase name="testAdd_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testAdd_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testAdd_3" classname="RationalTest" time="0.0"/>
+  <testcase name="testAdd_4" classname="RationalTest" time="0.0"/>
+  <testcase name="testCompareTo_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testCompareTo_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testCompareTo_3" classname="RationalTest" time="0.0"/>
+  <testcase name="testCompareTo_4" classname="RationalTest" time="0.0"/>
+  <testcase name="testSubtract_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testSubtract_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testSubtract_3" classname="RationalTest" time="0.0"/>
+  <testcase name="testSubtract_4" classname="RationalTest" time="0.001"/>
+  <testcase name="testMultiply_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testMultiply_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testMultiply_3" classname="RationalTest" time="0.001"/>
+  <testcase name="testMultiply_4" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_4" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_5" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_6" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_7" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_8" classname="RationalTest" time="0.0"/>
+  <testcase name="testToString_9" classname="RationalTest" time="0.001"/>
+  <testcase name="testDivide_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testDivide_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testDivide_3" classname="RationalTest" time="0.0"/>
+  <testcase name="testEquals_1" classname="RationalTest" time="0.0"/>
+  <testcase name="testEquals_2" classname="RationalTest" time="0.0"/>
+  <testcase name="testEquals_3" classname="RationalTest" time="0.0"/>
+  <testcase name="testEquals_4" classname="RationalTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

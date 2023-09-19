@@ -10,13 +10,18 @@ class Rational {
 
     Rational() {
         // to be completed
-        super();
+        numerator = 0;
+        denominator = 1;
     }
 
     Rational(long numerator, long denominator) throws Illegal {
         // to be completed
         this.numerator = numerator;
         this.denominator = denominator;
+
+        if (denominator == 0) {
+            throw new Illegal("Division by zero error");
+        }
     }
 
     // find the reduce form 
@@ -83,10 +88,11 @@ class Rational {
      */
     public boolean equals(Object x) {
         // to be completed
-        if(numerator == ((Rational) x).numerator && denominator == ((Rational) x).denominator) {
+        if(this == x && this.numerator == ((Rational) x).numerator && this.denominator == ((Rational) x).denominator) {
             return true; // TODO: This needs to be modified.
-        }else
+        }if (x == null || getClass() != x.getClass()) {
             return false;
+        }else return numerator == ((Rational) x).numerator && denominator == ((Rational) x).denominator;
     }
 
     /***
@@ -97,17 +103,46 @@ class Rational {
      */
     public long compareTo(Object x) {
         // to be completed
+        if (!(x instanceof Rational)) {
+            throw new IllegalArgumentException("Cannot compare a Rational to a non-Rational object.");
+        }
 
-        return -1; // TODO: this needs to be modified.
+        Rational RationalX = (Rational) x;
+        long X_Numerator = RationalX.numerator * this.denominator;
+        long current_Numerator = this.numerator * RationalX.denominator;
+
+        if (current_Numerator < X_Numerator) {
+            return -1;
+        } else if (current_Numerator > X_Numerator) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+//        if(numerator == ((Rational) x).numerator && denominator == ((Rational) x).denominator) {
+//            return 0;
+//        }else if(((numerator * ((Rational) x).denominator) / (denominator * ((Rational) x).denominator)) > (((((Rational) x).numerator) * denominator) / (((Rational) x).denominator) * denominator)){
+//            return 1;
+//        }else return -1;
     }
 
     /***
      * Give the formatted string of the rational number
      * @return the string representation of the rational number. For example, "1/2", "3/4".
      */
-    public String toString() { 
+    public String toString() {
         // to be completed
-        return ; // TODO: This needs to be modified.
+        if(this.denominator == 0){
+            return "Invalid Rational";
+        }
+        simplestForm();
+        // In case of the rational number is divisible (integer form)
+        if(this.numerator % this.denominator == 0){
+            return String.valueOf(this.numerator / this.denominator);
+        }else if(this.numerator < 0 && this.denominator < 0) {
+            return String.valueOf(-numerator) + "/" + String.valueOf(-denominator);
+            //In case of both numerator and denominator are negative (-x/-y = x/y)
+        }else return String.valueOf(numerator) + "/" + String.valueOf(denominator); // TODO: This needs to be modified.
     }
 
     public static void main(String[] args) {
